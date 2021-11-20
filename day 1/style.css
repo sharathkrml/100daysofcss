@@ -1,3 +1,7 @@
+:root {
+  --alpha-width: 22px;
+  --alpha-color:white;
+}
 * {
   box-sizing: border-box;
   font-family: "Courier New", sans-serif;
@@ -12,23 +16,61 @@ body {
 }
 .main-head {
   display: flex;
-  font-size: 100px;
-  font-weight: bold;
-  position: relative;
+  position: fixed;
+  top: 37vh;
+  left: 53vh;
+  align-items: center;
+  justify-content: centers;
 }
-.one {
-  position: absolute;
+.main-head > *{
+  box-shadow: 0 0 10px 1px  rgba(0,0,0,0.2);
+  background-color: var(--alpha-color);
+}
+.one-horizontal,
+.one-vertical {
+  height: 100px;
+  position: relative;
+  width: var(--alpha-width);
+}
+.one-horizontal {
   z-index: 3;
-  color: red;
+  bottom: 26px;
+  height: 50px;
+  transform: rotate(-130deg);
 }
-.two {
-  position: relative;
-  z-index: 2;
-  color: yellow;
-  left: 36px;
+.one-vertical {
+  z-index: 4;
 }
+.two,
 .three {
   position: relative;
-  color: white;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border: var(--alpha-width) solid var(--alpha-color);
+  border-radius: 50%;
+}
+.two {
+  z-index: 2;
+  right: 10px;
+}
+.three {
+  right: 30px;
   z-index: 1;
+  /* border: var(--alpha-width) solid violet; */
+}
+.details {
+  color: white;
+  position: absolute;
+  top: 52vh;
+  left: 55.5vh;
+  font-weight: bold;
+}
+.head {
+  font-size: 83px;
+}
+.desc {
+  font-size: 25px;
+  top: 73px;
+  position: absolute;
 }
